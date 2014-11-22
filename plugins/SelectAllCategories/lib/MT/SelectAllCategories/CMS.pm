@@ -15,11 +15,20 @@ sub template_param_edit_entry {
     $node->innerHTML(q!;
 <__trans_section component="SelectAllCategories">
 (function($) {
+    $.fn.enforceToCheck = function(value) {
+        var el = this;
+        return el.each(function() {
+            if ( $(this).prop('checked') \!= value ) {
+                $(this).trigger('click');
+            }
+        });
+    };
+
     var $selectAll = $('<a href="javascript:void(0)" style="float:left"><__trans phrase="Select All"></a>').click(function() {
-            $('#category-selector-list .add-category-checkbox').prop('checked', true);
+            $('#category-selector-list .add-category-checkbox').enforceToCheck(true);
             return false;
         }), $unselectAll = $('<a href="javascript:void(0)" style="float:left; margin-left: 8px"><__trans phrase="Unselect All"></a>').click(function() {
-            $('#category-selector-list .add-category-checkbox').prop('checked', false);
+            $('#category-selector-list .add-category-checkbox').enforceToCheck(false);
             return false;
         });
     $('.category-selector-header').prepend($unselectAll).prepend($selectAll);
