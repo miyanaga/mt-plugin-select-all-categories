@@ -31,7 +31,8 @@ sub template_param_edit_entry {
             $('#category-selector-list .add-category-checkbox').enforceToCheck(false);
             return false;
         });
-    $('.category-selector-header').prepend($unselectAll).prepend($selectAll);
+    var $controll = $('<div style="float: left; padding-bottom: 6px;"></div>').append($selectAll).append($unselectAll);
+    $('#entry-category-widget .widget-content').prepend($controll);
 
     var hint = navigator.userAgent.indexOf('Mac') == -1 ?
         '<__trans phrase="Press Ctrl key to select or unselect the tree.">' :
