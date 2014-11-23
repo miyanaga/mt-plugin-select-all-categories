@@ -1,9 +1,0 @@
-id: SelectAllCategories
-name: <__trans phrase="Select All Categories">
-l10n_class: MT::SelectAllCategories::L10N
-version: 1.0.0
-
-applications:
-    cms:
-        callbacks:
-            template_param.edit_entry: $SelectAllCategories::MT::SelectAllCategories::CMS::template_param_edit_entry

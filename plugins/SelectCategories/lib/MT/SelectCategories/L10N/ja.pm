@@ -1,8 +1,8 @@
-package MT::SelectAllCategories::L10N::ja;
+package MT::SelectCategories::L10N::ja;
 
 use strict;
 use utf8;
-use base 'MT::SelectAllCategories::L10N::en_us';
+use base 'MT::SelectCategories::L10N::en_us';
 use vars qw( %Lexicon );
 
 %Lexicon = (

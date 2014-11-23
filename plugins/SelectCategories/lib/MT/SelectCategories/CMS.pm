@@ -1,9 +1,9 @@
-package MT::SelectAllCategories::CMS;
+package MT::SelectCategories::CMS;
 
 use strict;
 use warnings;
 
-use MT::SelectAllCategories::Util;
+use MT::SelectCategories::Util;
 
 sub template_param_edit_entry {
     my ( $ctx, $app, $param, $tmpl ) = @_;
@@ -13,7 +13,7 @@ sub template_param_edit_entry {
 
     my $node = $tmpl->createElement('setvarblock', { name => 'jq_js_include', append => 1 });
     $node->innerHTML(q!;
-<__trans_section component="SelectAllCategories">
+<__trans_section component="SelectCategories">
 (function($) {
     $.fn.enforceToCheck = function(value) {
         var el = this;
