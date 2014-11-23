@@ -1,7 +1,7 @@
 id: SelectCategories
 name: <__trans phrase="Select Categories">
 l10n_class: MT::SelectCategories::L10N
-version: 1.0.0
+version: 1.2.0
 
 applications:
     cms:
