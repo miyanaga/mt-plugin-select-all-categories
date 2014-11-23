@@ -1,4 +1,4 @@
-package MT::SelectAllCategories::L10N;
+package MT::SelectCategories::L10N;
 
 use strict;
 use base 'MT::Plugin::L10N';
